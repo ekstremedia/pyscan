@@ -1,0 +1,2 @@
+# pyscan
+Python Barcode scanner
