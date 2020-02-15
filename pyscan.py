@@ -1,6 +1,14 @@
 import requests
 ENDPOINT = "http://192.168.1.201/bruktn/public/api/scan"
 V = "0.01"
+green = "\033[1;32;38m"
+endcolor = "\033[0m"
+
+def greenText(text):
+    return green+text+endcolor
+
+
+
 print("    ")
 print("   ,-----.                 ,--.     ,--.  ,--.  ")
 print("   |  |) /_ ,--.--.,--.,--.|  |,-.,-'  '-.|  |,--,--, ")
@@ -27,6 +35,6 @@ while True:
     #if word.isalpha() == True:
     #    break
    # else:
-    print("   KODE: "+word+ " (Svar: "+svar+")")
+    print("   KODE: "+word+ ": "+svar)
 
 
