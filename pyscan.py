@@ -1,6 +1,6 @@
 import requests
 ENDPOINT = "http://192.168.1.201/bruktn/public/api/scan"
-V = "0.01"
+V = "0.02"
 green = "\033[1;32;38m"
 endcolor = "\033[0m"
 
@@ -32,9 +32,6 @@ while True:
     DATA = {'metode': 'pyscan', 'code': word}
     r = requests.post(url=ENDPOINT, data=DATA)
     svar = r.text
-    #if word.isalpha() == True:
-    #    break
-   # else:
     print("   KODE: "+word+ ": "+svar)
 
 
