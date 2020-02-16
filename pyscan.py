@@ -1,4 +1,6 @@
 import requests
+from subprocess import call
+
 ENDPOINT = "http://192.168.1.201/bruktn/public/api/scan"
 V = "0.02"
 green = "\033[1;32;38m"
@@ -29,6 +31,7 @@ print("    ")
 
 while True:
     word = input("SCAN KODE: ")
+    call(["espeak", "-vno -s140", "Scanner klar!"])
     DATA = {'metode': 'pyscan', 'code': word}
     r = requests.post(url=ENDPOINT, data=DATA)
     svar = r.text
