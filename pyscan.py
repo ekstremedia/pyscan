@@ -28,10 +28,10 @@ print("    ")
 
 
 
-
+call(["espeak", "-vno", "Scanning er klar!"])
 while True:
     word = input("SCAN KODE: ")
-    call(["espeak", "-vno -s140", "Scanner klar!"])
+
     DATA = {'metode': 'pyscan', 'code': word}
     r = requests.post(url=ENDPOINT, data=DATA)
     svar = r.text
