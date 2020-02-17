@@ -7,7 +7,10 @@ green = "\033[1;32;38m"
 endcolor = "\033[0m"
 
 def greenText(text):
-    return green+text+endcolor 
+    return green+text+endcolor
+def beep():
+    print("\007")
+beep()
 
 print("    ")
 print("   ,-----.                 ,--.     ,--.  ,--.  ")
@@ -33,6 +36,7 @@ while True:
     DATA = {'metode': 'pyscan', 'code': word}
     r = requests.post(url=ENDPOINT, data=DATA)
     svar = r.text
+    call(["espeak", "-vno", "ferdig"])
     print("   KODE: "+word+ ": "+svar)
 
 
