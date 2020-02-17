@@ -1,15 +1,13 @@
 import requests
 from subprocess import call
 
-ENDPOINT = "http://192.168.1.201/bruktn/public/api/scan"
+ENDPOINT = "http://192.168.1.201/bruktn/api/scan"
 V = "0.02"
 green = "\033[1;32;38m"
 endcolor = "\033[0m"
 
 def greenText(text):
-    return green+text+endcolor
-
-
+    return green+text+endcolor 
 
 print("    ")
 print("   ,-----.                 ,--.     ,--.  ,--.  ")
